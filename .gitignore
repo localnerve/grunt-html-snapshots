@@ -1,0 +1,5 @@
+node_modules
+npm-debug.log
+tmp
+grunt-html-snapshots.sublime-project
+grunt-html-snapshots.sublime-workspace

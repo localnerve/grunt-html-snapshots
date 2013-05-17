@@ -1,0 +1,6 @@
+{
+  "source": "test/fixtures/test_robots.txt",
+  "selector": "#dynamic-content",
+  "outputDirClean": "true",
+  "hostname": "localhost"
+}
