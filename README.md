@@ -1,6 +1,6 @@
 # grunt-html-snapshots
 
-> The grunt task for html-snapshots
+> The grunt task for [html-snapshots](http://github.com/localnerve/html-snapshots)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -44,7 +44,7 @@ Default value: `false`
 A boolean value that is used to force the gruntfile to continue, even if this task fails.
 
 #### MORE
-For details of task and target specific options, read the options section of [html-snapshots][http://github.com/localnerve/html-snapshots]
+For details of task and target specific options, read the options section of [html-snapshots](http://github.com/localnerve/html-snapshots)
 
 ### Usage Examples
 
@@ -73,7 +73,7 @@ grunt.initConfig({
 })
 ```
 
-For more examples, visit [html-snapshots][http://github.com/localnerve/html-snapshots].
+For more examples, visit [html-snapshots](http://github.com/localnerve/html-snapshots).
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
