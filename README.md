@@ -1,4 +1,5 @@
 # grunt-html-snapshots
+[![Build Status](https://secure.travis-ci.org/localnerve/grunt-html-snapshots.png?branch=master)](http://travis-ci.org/localnerve/grunt-html-snapshots)
 
 > The grunt task for [html-snapshots](http://github.com/localnerve/html-snapshots)
 
@@ -69,11 +70,14 @@ grunt.initConfig({
     release: {
       outputDir: "./snapshots/release"
     }
-  },
-})
+  }
+});
+
+grunt.registerTask('debug', ['html_snapshots:debug']);
+grunt.registerTask('release', ['html_snapshots:release']);
 ```
 
-For more examples, visit [html-snapshots](http://github.com/localnerve/html-snapshots).
+For more examples of using the html-snapshots options, visit [html-snapshots](http://github.com/localnerve/html-snapshots).
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
