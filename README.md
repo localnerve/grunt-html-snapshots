@@ -64,14 +64,20 @@ grunt.initConfig({
     },
     // the debug target
     debug: {
-      outputDir: "./snapshots/debug"
+      options: {
+        outputDir: "./snapshots/debug"
+      }
     },
     // the release target
     release: {
-      outputDir: "./snapshots/release"
+      options: {
+        outputDir: "./snapshots/release"
+      }
     }
   }
 });
+
+grunt.loadNpmTasks('grunt-html-snapshots');
 
 grunt.registerTask('debug', ['html_snapshots:debug']);
 grunt.registerTask('release', ['html_snapshots:release']);
