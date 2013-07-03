@@ -5,8 +5,6 @@
  * Copyright (c) 2013 Alex Grant
  * Licensed under the MIT license.
  */
-var path = require('path');
-
 module.exports = function(grunt) {
 
   var html_snapshots = require('html-snapshots');

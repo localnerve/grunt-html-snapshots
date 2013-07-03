@@ -30,7 +30,9 @@ grunt.initConfig({
       // Task-specific options go here.
     },
     your_target: {
-      // Target-specific options go here.
+      options: {
+        // Target-specific options go here.
+      }
     },
   },
 })
