@@ -87,10 +87,23 @@ module.exports = function(grunt) {
     grunt.log.ok();
   });
 
+  grunt.registerTask('html_snapshots_options', 'prepare options for html_snapshots', function() {
+    var optionsHelper = require("./test/helpers/options");
+    var done = this.async();
+    optionsHelper.detector(function(globalPhantom) {
+      if (globalPhantom) {
+        var htmlSnapshots = grunt.config.get("html_snapshots");
+        htmlSnapshots.options.phantomjs = "phantomjs";
+        grunt.config.set("html_snapshots", htmlSnapshots);
+      }
+      done();
+    });
+  });
+
   // Whenever the "test" task is run, run this plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'test_server1', 'html_snapshots', 'nodeunit:tests']);
-  grunt.registerTask('target1', ['clean', 'test_server1', 'html_snapshots:target1', 'nodeunit:target1']);
-  grunt.registerTask('target2', ['clean', 'html_snapshots:target2', 'nodeunit:target2']);
+  grunt.registerTask('test', ['clean', 'test_server1', 'html_snapshots_options', 'html_snapshots', 'nodeunit:tests']);
+  grunt.registerTask('target1', ['clean', 'test_server1', 'html_snapshots_options', 'html_snapshots:target1', 'nodeunit:target1']);
+  grunt.registerTask('target2', ['clean', 'html_snapshots_options', 'html_snapshots:target2', 'nodeunit:target2']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
