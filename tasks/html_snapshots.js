@@ -1,4 +1,4 @@
-/*
+/**
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
@@ -28,15 +28,13 @@ module.exports = function(grunt) {
     // take the snapshots
     var result = html_snapshots.run(options, (function(grunt, done, force){
       return function(nonError) {
-        setTimeout(function() {
-          var doneArg = force ? undefined : nonError;
-          if (nonError === false) {
-            grunt.log.error("html_snapshots failed");          
-          } else {
-            grunt.log.ok();
-          }
-          done(doneArg);
-        }, 100); // sometimes last child process output gets interleaved with OK...
+        var doneArg = force ? undefined : nonError;
+        if (result && typeof nonError === "undefined") {
+          grunt.log.ok();
+        } else {
+          grunt.log.error("html_snapshots failed");
+        }
+        done(doneArg);
       };
     })(grunt, done, force));
 
