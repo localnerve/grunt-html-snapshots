@@ -1,8 +1,8 @@
-/*
+/**
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013 Alex Grant
+ * Copyright (c) 2013, 2014 Alex Grant
  * Licensed under the MIT license.
  */
 
