@@ -1,10 +1,13 @@
 # grunt-html-snapshots
 [![Build Status](https://secure.travis-ci.org/localnerve/grunt-html-snapshots.png?branch=master)](http://travis-ci.org/localnerve/grunt-html-snapshots)
+[![Dependency Status](https://david-dm.org/localnerve/grunt-html-snapshots.png)](https://david-dm.org/localnerve/grunt-html-snapshots)
+[![devDependency Status](https://david-dm.org/localnerve/grunt-html-snapshots/dev-status.png)](https://david-dm.org/localnerve/grunt-html-snapshots#info=devDependencies)
+[![devDependency Status](https://david-dm.org/localnerve/grunt-html-snapshots/peer-status.png)](https://david-dm.org/localnerve/grunt-html-snapshots#info=peerDependencies)
 
 > The grunt task for [html-snapshots](http://github.com/localnerve/html-snapshots)
 
 ## Getting Started
-This plugin requires Grunt `~0.4.1`
+This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
