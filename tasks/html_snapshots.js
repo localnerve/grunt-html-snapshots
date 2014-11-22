@@ -2,7 +2,7 @@
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013 Alex Grant
+ * Copyright (c) 2013, 2014, LocalNerve, Alex Grant
  * Licensed under the MIT license.
  */
 module.exports = function(grunt) {
@@ -26,17 +26,15 @@ module.exports = function(grunt) {
     var done = this.async();
 
     // take the snapshots
-    var result = html_snapshots.run(options, (function(grunt, done, force){
-      return function(nonError) {
-        var doneArg = force ? undefined : nonError;
-        if (result && typeof nonError === "undefined") {
-          grunt.log.ok();
-        } else {
-          grunt.log.error("html_snapshots failed");
-        }
-        done(doneArg);
-      };
-    })(grunt, done, force));
+    var result = html_snapshots.run(options, function(err) {
+      var doneArg = force ? undefined : err;
+      if (result && !err) {
+        grunt.log.ok();
+      } else {
+        grunt.log.error("html_snapshots failed");
+      }
+      done(doneArg);
+    });
 
     if (!result) {
       grunt.log.error("html_snapshots failed");

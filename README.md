@@ -24,7 +24,7 @@ grunt.loadNpmTasks('grunt-html-snapshots');
 ## The "html_snapshots" task
 
 ### Overview
-In your project's Gruntfile, add a section named `html_snapshots` to the data object passed into `grunt.initConfig()`.
+This is a simple grunt task that uses the [html-snapshots](http://github.com/localnerve/html-snapshots) library. In your project's Gruntfile, add a section named `html_snapshots` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
@@ -88,7 +88,7 @@ grunt.registerTask('debug', ['html_snapshots:debug']);
 grunt.registerTask('release', ['html_snapshots:release']);
 ```
 
-For more examples of using the html-snapshots options, visit [html-snapshots](http://github.com/localnerve/html-snapshots).
+Many more options are available. For details and examples of using the html-snapshots options, visit [html-snapshots](http://github.com/localnerve/html-snapshots).
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
