@@ -1,4 +1,6 @@
 # grunt-html-snapshots
+
+[![npm version](https://badge.fury.io/js/grunt-html-snapshots.svg)](http://badge.fury.io/js/grunt-html-snapshots)
 [![Build Status](https://secure.travis-ci.org/localnerve/grunt-html-snapshots.png?branch=master)](http://travis-ci.org/localnerve/grunt-html-snapshots)
 [![Dependency Status](https://david-dm.org/localnerve/grunt-html-snapshots.png)](https://david-dm.org/localnerve/grunt-html-snapshots)
 [![devDependency Status](https://david-dm.org/localnerve/grunt-html-snapshots/dev-status.png)](https://david-dm.org/localnerve/grunt-html-snapshots#info=devDependencies)
