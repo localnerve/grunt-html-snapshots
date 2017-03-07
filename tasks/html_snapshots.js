@@ -32,12 +32,14 @@ module.exports = function (grunt) {
         grunt.log.ok();
       })
       .catch(function (err) {
-        grunt.log.error("html_snapshots failed");
+        grunt.log.error('html_snapshots failed');
+        if (force) {
+          grunt.log.error(''+err);
+        }
         return err;
       })
       .then(function (err) {
-        var doneArg = force ? undefined : err;
-        done(doneArg);
+        done(force ? undefined : err);
       });
   });
 
