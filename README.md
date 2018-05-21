@@ -1,5 +1,7 @@
 # grunt-html-snapshots
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/localnerve/grunt-html-snapshots.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/grunt-html-snapshots.svg)](http://badge.fury.io/js/grunt-html-snapshots)
 [![Build Status](https://secure.travis-ci.org/localnerve/grunt-html-snapshots.svg?branch=master)](http://travis-ci.org/localnerve/grunt-html-snapshots)
 [![Dependency Status](https://david-dm.org/localnerve/grunt-html-snapshots.svg)](https://david-dm.org/localnerve/grunt-html-snapshots)
