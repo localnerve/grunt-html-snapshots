@@ -27,7 +27,7 @@
     "html-snapshots": ">= 0.14.0"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-jshint": "^2.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^2.0.0",
     "grunt": ">=0.4.5"
