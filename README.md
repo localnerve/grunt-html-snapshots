@@ -1,6 +1,6 @@
 # grunt-html-snapshots
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/localnerve/grunt-html-snapshots.svg)](https://greenkeeper.io/)
+
 
 [![npm version](https://badge.fury.io/js/grunt-html-snapshots.svg)](http://badge.fury.io/js/grunt-html-snapshots)
 ![Verify](https://github.com/localnerve/grunt-html-snapshots/workflows/Verify/badge.svg)
