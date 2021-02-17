@@ -2,27 +2,14 @@
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013, 2014 Alex Grant
+ * Copyright (c) 2013 - 2021 Alex Grant
  * Licensed under the MIT license.
  */
 
-'use strict';
-
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>',
-      ],
-      options: {
-        jshintrc: '.jshintrc',
-      },
-    },
-
     // Before generating any new files, remove any previously-created files.
     clean: {
       tests: ['tmp'],
@@ -74,23 +61,22 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // Register the test server
   grunt.registerTask('test_server1', 'serve the test files', function(){
-    var options = this.options();
-    var server = require('./test/server');
+    const options = this.options();
+    const server = require('./test/server');
     server.start('./test/server', options.port);
     grunt.log.writeln("running test server on port "+options.port);
     grunt.log.ok();
   });
 
-  grunt.registerTask('html_snapshots_options', 'prepare options for html_snapshots', function() {
-    var optionsHelper = require("./test/helpers/options");
-    var done = this.async();
-    optionsHelper.detector(function(globalPhantom) {
+  grunt.registerTask('html_snapshots_options', 'prepare options for html_snapshots', function(){
+    const optionsHelper = require("./test/helpers/options");
+    const done = this.async();
+    optionsHelper.detector(globalPhantom => {
       if (globalPhantom) {
         var htmlSnapshots = grunt.config.get("html_snapshots");
         htmlSnapshots.options.phantomjs = "phantomjs";
@@ -106,6 +92,6 @@ module.exports = function(grunt) {
   grunt.registerTask('target2', ['clean', 'html_snapshots_options', 'html_snapshots:target2', 'nodeunit:target2']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['test']);
 
 };

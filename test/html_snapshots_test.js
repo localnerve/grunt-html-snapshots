@@ -1,30 +1,13 @@
-'use strict';
+/**
+ * Test the task
+ */
+/* global Promise */
 
-var grunt = require('grunt');
-var fs = require('fs');
-
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
+const grunt = require('grunt');
+const { pathExists } = require('./utils');
 
 exports.html_snapshots = {
-  setUp: function(done) {
+  setUp: function (done) {
     // setup here if necessary
     done();
   },
@@ -32,20 +15,32 @@ exports.html_snapshots = {
   target1: function(test) {
     test.expect(3);
 
-    grunt.file.read('test/expected/target1').split('\n').forEach(function(line){
-      test.equal(true, fs.existsSync(line), line+" should exist");
+    const results = [];
+
+    grunt.file.read('test/expected/target1').split('\n').forEach(line => {
+      results.push(pathExists(line).then(exists => {
+        test.equal(true, exists, `${line} should exist`);
+      }));      
     });
 
-    test.done();
+    Promise.all(results).finally(() => {
+      test.done();
+    });
   },
 
   target2: function(test) {
     test.expect(3);
     
-    grunt.file.read('test/expected/target2').split('\n').forEach(function(line){
-      test.equal(false, fs.existsSync(line), line+" should not exist");
+    const results = [];
+
+    grunt.file.read('test/expected/target2').split('\n').forEach(line => {
+      results.push(pathExists(line).then(exists => {
+        test.equal(false, exists, `${line} should not exist`);
+      }));
     });
 
-    test.done();
+    Promise.all(results).finally(() => {
+      test.done();
+    });
   }
 };

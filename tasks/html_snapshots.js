@@ -2,45 +2,41 @@
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013 - 2017, LocalNerve, Alex Grant
+ * Copyright (c) 2013 - 2021, LocalNerve, Alex Grant
  * Licensed under the MIT license.
  */
+const html_snapshots = require('html-snapshots');
+
 module.exports = function (grunt) {
-
-  var html_snapshots = require('html-snapshots');
-
-  grunt.registerMultiTask('html_snapshots', 'Generate html snapshots.',
-  function () {
-
+  grunt.registerMultiTask('html_snapshots', 'Generate html snapshots.', function () {
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
+    const options = this.options({
       force: false
     });
 
     // Report html_snapshot errors but dont fail the task
-    var force = options.force;
+    const force = options.force;
     delete options.force;
 
     grunt.verbose.writeflags(options, 'html_snapshots options');
 
     // Setup for async
-    var done = this.async();
+    const done = this.async();
 
     // Take the snapshots
     html_snapshots.run(options)
-      .then(function (completed) {
+      .then(() => {
         grunt.log.ok();
       })
-      .catch(function (err) {
+      .catch(err => {
         grunt.log.error('html_snapshots failed');
         if (force) {
-          grunt.log.error(''+err);
+          grunt.log.error(err);
         }
         return err;
       })
-      .then(function (err) {
+      .then(err => {
         done(force ? undefined : err);
       });
   });
-
 };

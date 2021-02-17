@@ -8,22 +8,22 @@
  * In some test environments (travis), local phantomjs will not install if a global is found.
  */
 
-var spawn = require("child_process").spawn;
+const spawn = require("child_process").spawn;
 
 module.exports = {
 
   // for now, callback is passed true if global phantomjs should be used
-  detector: function(callback) {
+  detector: callback => {
     // try to run phantom globally
-    var cp = spawn("phantomjs", ["--version"]);
+    const cp = spawn("phantomjs", ["--version"]);
 
     // if it fails, use local per the defaults
-    cp.on("error", function(err) {
+    cp.on("error", () => {
       callback(false);
     });
 
     // if it succeeds, use the global
-    cp.on("exit", function(code) {
+    cp.on("exit", code => {
       if (code === 0) {
         callback(true);
       }
