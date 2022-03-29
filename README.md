@@ -3,8 +3,6 @@
 [![npm version](https://badge.fury.io/js/grunt-html-snapshots.svg)](http://badge.fury.io/js/grunt-html-snapshots)
 ![Verify](https://github.com/localnerve/grunt-html-snapshots/workflows/Verify/badge.svg)
 [![Dependency Status](https://david-dm.org/localnerve/grunt-html-snapshots.svg)](https://david-dm.org/localnerve/grunt-html-snapshots)
-[![devDependency Status](https://david-dm.org/localnerve/grunt-html-snapshots/dev-status.svg)](https://david-dm.org/localnerve/grunt-html-snapshots#info=devDependencies)
-[![devDependency Status](https://david-dm.org/localnerve/grunt-html-snapshots/peer-status.svg)](https://david-dm.org/localnerve/grunt-html-snapshots#info=peerDependencies)
 
 > The grunt task for [html-snapshots](http://github.com/localnerve/html-snapshots)
 

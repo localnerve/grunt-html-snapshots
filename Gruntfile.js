@@ -2,7 +2,7 @@
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013 - 2021 Alex Grant
+ * Copyright (c) 2013 - 2022 Alex Grant
  * Licensed under the MIT license.
  */
 
