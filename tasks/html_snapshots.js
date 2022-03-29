@@ -2,7 +2,7 @@
  * grunt-html-snapshots
  * https://github.com/localnerve/grunt-html-snapshots
  *
- * Copyright (c) 2013 - 2021, LocalNerve, Alex Grant
+ * Copyright (c) 2013 - 2022, LocalNerve, Alex Grant
  * Licensed under the MIT license.
  */
 const html_snapshots = require('html-snapshots');
