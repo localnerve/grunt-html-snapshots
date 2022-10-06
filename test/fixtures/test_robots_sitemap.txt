@@ -9,5 +9,7 @@ Disallow: /vendor/
 Disallow: /fonts/
 Disallow: /images/
 
+Sitemap: http://localhost:8051/sitemap.xml
+
 User-agent: ia_archiver
 Disallow: /

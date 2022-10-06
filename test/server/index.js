@@ -1,18 +1,18 @@
 /**
  * Create a local web server for tests
  */
-var http = require("http"),
-    url = require("url"),
-    path = require("path"),
-    fs = require("fs");
+const http = require("http"),
+      url  = require("url"),
+      path = require("path"),
+      fs   = require("fs");
 
 module.exports = {
 
   start: function(rootDir, port, end) {
     http.createServer(function(request, response) {
 
-      var uri = url.parse(request.url).pathname,
-          filename = path.join(rootDir, uri);
+      const uri = url.parse(request.url).pathname;
+      let filename = path.join(rootDir, uri);
 
       fs.exists(filename, function(exists) {
         if(!exists) {
@@ -34,8 +34,13 @@ module.exports = {
             return;
           }
 
-          response.writeHead(200);
-          response.write(file, "binary");
+          if (path.extname(filename) === '.xml') {
+            response.writeHead(200, {"Content-Type": "text/xml"});
+            response.write(file);
+          } else {
+            response.writeHead(200);
+            response.write(file, "binary");
+          }
           response.end();
           if (typeof end === "function")
             setTimeout(end, 1000);

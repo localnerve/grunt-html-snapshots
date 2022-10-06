@@ -42,5 +42,21 @@ exports.html_snapshots = {
     Promise.all(results).finally(() => {
       test.done();
     });
+  },
+
+  target3: function(test) {
+    test.expect(3);
+
+    const results = [];
+
+    grunt.file.read('test/expected/target3').split('\n').forEach(line => {
+      results.push(pathExists(line).then(exists => {
+        test.equal(true, exists, `${line} should exist`);
+      }));      
+    });
+
+    Promise.all(results).finally(() => {
+      test.done();
+    });
   }
 };

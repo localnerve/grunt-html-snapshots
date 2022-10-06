@@ -27,6 +27,12 @@ module.exports = function (grunt) {
       }
     },
 
+    test_server3: {
+      options: {
+        port: 8051
+      }
+    },
+
     // Configuration to be run (and then tested).
     html_snapshots: {
       options: grunt.file.readJSON("test/input/default_options"),
@@ -44,6 +50,14 @@ module.exports = function (grunt) {
           hostname: "bogus",
           port: "<%= test_server2.options.port %>",
           force: true
+        }
+      },
+
+      target3: {
+        options: {
+          source: "test/fixtures/test_robots_sitemap.txt",
+          outputDir: "tmp/target3/snapshots",
+          port: "<%= test_server3.options.port %>"
         }
       }
     },
