@@ -25,7 +25,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "html-snapshots": "^2.12.3"
+    "html-snapshots": "^2.13.0"
   },
   "devDependencies": {
     "eslint": "^8.53.0",
