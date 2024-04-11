@@ -1,7 +1,6 @@
 /**
  * tests, target2
  */
-/* global Promise */
 const grunt = require('grunt');
 const { pathExists } = require('./utils');
 
