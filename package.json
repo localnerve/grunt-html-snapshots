@@ -29,7 +29,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "html-snapshots": "^4.6.0"
+    "html-snapshots": "^4.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
