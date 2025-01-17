@@ -1,7 +1,7 @@
 {
   "name": "grunt-html-snapshots",
   "description": "The grunt task for html-snapshots",
-  "version": "8.12.0",
+  "version": "8.13.0",
   "homepage": "https://github.com/localnerve/grunt-html-snapshots",
   "author": {
     "name": "Alex Grant",
@@ -29,11 +29,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "html-snapshots": "^4.14.0"
+    "html-snapshots": "^4.15.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "eslint": "^9.17.0",
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
     "globals": "^15.14.0",
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-nodeunit": "^5.0.0",
