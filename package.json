@@ -1,7 +1,7 @@
 {
   "name": "grunt-html-snapshots",
   "description": "The grunt task for html-snapshots",
-  "version": "9.11.0",
+  "version": "10.0.0",
   "homepage": "https://github.com/localnerve/grunt-html-snapshots",
   "author": {
     "name": "Alex Grant",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 20"
+    "node": ">= 22"
   },
   "files": [
     "Gruntfile.js",
@@ -29,19 +29,29 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "html-snapshots": "^5.11.0"
+    "html-snapshots": "^6.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.3.0",
+    "eslint": "^10.5.0",
     "globals": "^17.6.0",
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-nodeunit": "^5.0.0",
     "grunt": "^1.6.2"
   },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/localnerve"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/ncp/payment/DHCB5GUYMGX5U"
+    }
+  ],
   "overrides": {
-    "tap": "21.7.2",
-    "request": "npm:@cypress/request@4.0.0",
+    "tap": "21.7.4",
+    "request": "npm:@cypress/request@4.0.1",
     "minimatch": "^10.2.5",
     "lodash": "^4.18.1",
     "glob": "^13.0.6"
