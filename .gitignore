@@ -3,3 +3,4 @@ npm-debug.log
 tmp
 grunt-html-snapshots.sublime-project
 grunt-html-snapshots.sublime-workspace
+.DS_Store
